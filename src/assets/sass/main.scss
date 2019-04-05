@@ -1,9 +1,41 @@
+@import "flaticon";
 * {
 	user-select: none;
 }
 
 input {
 	user-select: element !important;
+}
+
+.container {
+	text-align: center;
+	height: 100%;
+	background-image: linear-gradient(to bottom, #a9b4c4, #b9c1ce, #c9ced8, #d9dce3, #e9eaed);
+	.fi {
+		font-size: 180px;
+		transition: all 500ms;
+		&.active {
+			transform: rotate(360deg);
+
+		}
+	}
+	.button-dice {
+		font-size: 25px;
+		position: absolute;
+		width: 100%;
+		border: none !important;
+		bottom: 0;
+		background-color: #5c80b7;
+		cursor: pointer;
+		height: auto !important;
+		border-radius: 0 !important;
+		padding: 20px;
+		left: 0;
+		color: #fff;
+		outline: none;
+		font-family: monospace;
+		cursor: pointer;
+	}
 }
 
 .tab-link {
@@ -184,3 +216,4 @@ input {
 		width: 46px;
 	}
 }
+
