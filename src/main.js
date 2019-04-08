@@ -43,5 +43,35 @@ export default new Vue({
   render: c => c('app'),
   components: {
     app
+  },
+  created() {
+    // online -offline control
+
+    document.addEventListener("online", onOnline, false);
+    document.addEventListener("offline", onOffline, false);
+
+    function onOffline() {
+      app.dialog.preloader('İnternet Bağlantısı Bekleniyor.');
+    }
+
+    function onOnline() {
+      app.dialog.close();
+    }
+
+// back control
+
+    document.addEventListener("backbutton", onBackKeyDown, false);
+
+    function onBackKeyDown(e) {
+      e.preventDefault();
+      if (app.views.main.router.currentRoute.url === '/') {
+        app.dialog.confirm('Çıkış yapılıyor', 'Uygulamadan çıkmak istediğinize emin misiniz?', function () {
+          navigator.app.exitApp();
+        });
+
+      } else {
+        app.router.back('/', {reload: true});
+      }
+    }
   }
 });

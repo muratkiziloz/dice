@@ -11,11 +11,16 @@ input {
 	text-align: center;
 	height: 100%;
 	background-image: linear-gradient(to bottom, #a9b4c4, #b9c1ce, #c9ced8, #d9dce3, #e9eaed);
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	flex-direction: column;
 	.fi {
 		font-size: 180px;
 		transition: all 500ms;
 		&.active {
-			transform: rotate(360deg);
+			transform: rotate(360deg) scale(0.5) ;
 
 		}
 	}

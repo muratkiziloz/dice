@@ -1,10 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.example.template" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="com.kiziloz.dice" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <preference name="android-minSdkVersion" value="19" />
+    <preference name="Fullscreen" value="true" />
+    <preference name="Orientation" value="portrait" />
     <preference name="DisallowOverscroll" value="true" />
     <hook src="hooks/hookers.js" type="before_prepare" />
     <hook src="hooks/beforedep.js" type="before_deploy" />
-    <name>Cordova - Framework7 - Vue - Webpack Template</name>
+    <name>Zar At</name>
     <description>
         Brand new cordova project!
     </description>
@@ -31,4 +33,8 @@
     <allow-navigation href="*" />
     <engine name="android" spec="^7.1.4" />
     <engine name="browser" spec="^5.0.4" />
+    <plugin name="cordova-admob-plus" spec="^0.25.1">
+        <variable name="APP_ID_ANDROID" value="test" />
+        <variable name="PLAY_SERVICES_VERSION" value="17.2.0" />
+    </plugin>
 </widget>
